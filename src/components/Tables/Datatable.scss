@@ -1,0 +1,144 @@
+/**
+ * Tables - Datatables
+ */
+
+@import '../Common/Variables';
+@import '../Common/Mixins';
+
+table.dataTable {
+    border-bottom: 0; //1px solid rgba($gray-base,.26) !important;
+
+    &,
+    & th,
+    & td {
+        box-sizing: border-box !important;
+    }
+
+    tbody tr {
+        background-color: transparent !important;
+        &:nth-of-type(odd) {
+            background-color: rgba($gray-base,.06) !important;
+        }
+    }
+    thead th,
+    thead td {
+        border-bottom: 0 !important;
+    }
+}
+
+
+
+.dataTables_wrapper select {
+  font-weight: bold;
+}
+
+// Search button
+.dataTables_filter {
+    text-align: center;
+    @media #{$min-tablet} {
+        float: right;
+    }
+    label > em {
+        color: inherit;
+        float: left;
+        margin-top: 8px;
+    }
+    input {
+        border: 1px solid rgba(160,160,160,.25);
+        margin-left: 10px;
+        padding: 0.25rem .5rem;
+        background-color: transparent;
+        color: inherit;
+        float: right;
+        max-width: 170px;
+    }
+}
+
+.dataTables_length {
+    text-align: center;
+    @media #{$min-tablet} {
+        float: left;
+    }
+    select {
+        border: 1px solid rgba(160,160,160,.25);
+        margin-right: 10px;
+        padding: 0.25rem .5rem;
+        background-color: transparent;
+        color: inherit;
+    }
+}
+
+// Pagination styles
+
+.dataTables_wrapper > .dataTables_paginate .paginate_button {
+    background-image: none !important;
+    background-color: rgba($gray-base,.26) !important;
+    border: 0 !important;
+    border-radius: 50%;
+    transition: none;
+    &:hover {
+        background-color: $brand-info !important;
+        color: #fff !important;
+    }
+}
+.dataTables_wrapper .dataTables_length,
+.dataTables_wrapper .dataTables_filter,
+.dataTables_wrapper .dataTables_info,
+.dataTables_wrapper .dataTables_processing,
+.dataTables_wrapper .dataTables_paginate,
+.dataTables_wrapper .dataTables_paginate .paginate_button {
+    color: inherit !important;
+}
+
+.dataTables_wrapper .dataTables_paginate .paginate_button.current {
+    background-color: $brand-info !important;
+    color: #fff !important;
+}
+
+.dataTables_wrapper .dataTables_paginate .paginate_button.current:hover {
+    color: #fff !important;
+}
+
+.dataTables_wrapper .dataTables_paginate .paginate_button.disabled,
+.dataTables_wrapper .dataTables_paginate .paginate_button.disabled:hover,
+.dataTables_wrapper .dataTables_paginate .paginate_button.disabled:active {
+    background-color: rgba($gray-base,.26) !important;
+    color: inherit !important;
+}
+
+// Info area
+.dataTables_info {
+    text-align: center;
+    @media #{$min-tablet} {
+        float: left;
+    }
+    padding-top: .75rem;
+}
+
+.dataTables_wrapper .dataTables_paginate {
+    text-align: center;
+    @media #{$min-tablet} {
+        float: right;
+        text-align: right;
+    }
+    padding-top: 0.25rem
+}
+
+table.dataTable.no-footer {
+    border-bottom: 0;
+}
+
+table.dataTable tfoot th, table.dataTable tfoot td {
+    border-top: 0;
+}
+
+// Support for cards
+.cardbox .dataTable {
+    width: 100% !important;
+}
+
+.cardbox .dataTables_wrapper>.row,
+.card .dataTables_wrapper>.row {
+    margin: 0;
+}
+

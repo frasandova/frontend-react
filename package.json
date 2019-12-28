@@ -81,7 +81,8 @@
     "modernizr": "modernizr -c modernizr-config.json -d src/modernizr.js",
     "postinstall": "npm run modernizr",
     "gcp-build": "npm run build",
-    "deploy": "gcloud config set project poc-banco-estado && gcloud app deploy app.yaml --version=0-0-1"
+    "deploy": "gcloud config set project poc-banco-estado && gcloud app deploy app.yaml --version=0-0-1",
+    "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false npm install"
   },
   "eslintConfig": {
     "extends": "react-app"
